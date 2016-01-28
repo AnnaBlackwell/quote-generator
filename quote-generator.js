@@ -13,13 +13,14 @@ var quotes = ["I hate to hear you talk about all women as if they were fine ladi
               "I do not want people to be very agreeable, as it saves me the trouble of liking them a great deal. — Personal correspondence",
               "The more I see of the world, the more am I dissatisfied with it; and every day confirms my belief of the inconsistency of all human characters, and of the little dependence that can be placed on the appearance of merit or sense. —Pride and Prejudice (1813)"]
 
-function getQuote () {
 //when the new quote button is clicked, 
-//out of the total number of objects in the array
-//randomly select one
-//insert the quote into html element class="quote"
-}
+document.getElementByID("newquotebutton").addEventListener("click", getQuote);
+//randomly select one of the objects in the array
+function getQuote() {
+  var randomQuote = quotes[Math.floor(Math.random()*quotes.length)];
+  console.log(randomQuote);
+  //insert the quote into html element ID="quote"
+  document.getElementByID("quote").innerHTML = randomQuote;
+  };
 
 // Tweet the quote
-
-
